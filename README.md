@@ -6,8 +6,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-[![Product Name Screen Shot][product-screenshot]](https://example.com)  
-Comprehensive API documentation covering all endpoints, parameters, and response formats.
+(Drafting) Comprehensive API documentation covering all endpoints, parameters, and response formats.
 >**Swagger Endpoint**: Easily explore and test API endpoints using the interactive Swagger interface.
 
 >**TypeDoc Reference**: Detailed on-line documentation generated using TypeDoc, providing insights into all classes, functions, interfaces, and other objects utilized throughout the API.
@@ -20,9 +19,6 @@ Dive in and start building amazing things with this API! If you have any questio
 ### Built With:-
 * [![Typescript][Typescript.js]][Typescript-url]
 * [![Loopback][Loopback.js]][Loopback-url]
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Supports the following databases:-
