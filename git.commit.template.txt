@@ -1,0 +1,31 @@
+NAME: [Ticket Name or Title]
+
+WHY:
+[Cloning]
+[Solutioning]
+[CI/CD]
+[TDD] 
+[Drafting]
+[Refactoring] 
+[Documentation] 
+[Instrumentation]
+[Performance Tuning]
+[Localisation]
+[Globalisation]
+[Feature Addition]
+[Typo Fix]
+[Bug Fix] 
+[Code Review Change] 
+[Technical Debt]
+
+TICKET:
+[Url of Ticket]
+
+INFO:
+[Optional longer description of what was changed, reasons for change]
+
+HELP: 
+1. Please delete the WHY: optiions which are not applicable. 
+2. Cut-and-paste in the URL of the Work item linked to this commit, as the [Url of Ticket] 
+3. Give a brief Summary or ideally the actual work item's name if available, as the [Ticket Name or Title]
+4. GitHub defaults PR names to NAME: [Ticket Name or Title]
