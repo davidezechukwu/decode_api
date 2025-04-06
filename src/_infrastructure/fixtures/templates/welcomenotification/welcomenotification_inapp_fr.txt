@@ -1,0 +1,6 @@
+Accueillir. Nous sommes si heureux que vous soyez ici.
+Veuillez vous connecter à votre compte de messagerie ({{EmailAddress}}) et appuyer sur le lien de vérification de l'adresse e-mail dans l'e-mail de bienvenue de ({{FromEmailAddress}}).
+N'oubliez pas de vérifier votre filtre de courrier indésirable, car l'e-mail a peut-être été accidentellement stocké dans ce dossier.
+Si l'e-mail a été marqué comme indésirable et que vous utilisez l'un des services d'hébergement de messagerie les plus populaires tels que Hotmail ou Gmail, vous pouvez ajouter ({{FromEmailAddress}}) à votre carnet d'adresses et aux expéditeurs approuvés pour éviter que ce problème ne se reproduise.
+Si après 24 heures vous ne recevez pas d'e-mail, veuillez nous contacter.
+Remarque : Il s'agit d'une démonstration de la vérification des e-mails. L'expéditeur ({{FromEmailAddress}}) utilisé dans ce cas peut être le vôtre, fourni par nous ou par un fournisseur de publipostage tiers réputé.

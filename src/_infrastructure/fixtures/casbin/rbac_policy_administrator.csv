@@ -1,0 +1,12 @@
+p, administrator, UserResponse, Get, internal
+p, administrator, UserResponse, Get, external
+p, administrator, UserResponse, Get, administrators
+p, administrator, UserResponse, Get, support
+p, administrator, UserResponse, Get, developers
+p, administrator, UserResponse, Get, testers
+p, administrator, UserResponse, Get, executive
+p, administrator, UserResponse, Get, all
+
+g, root, administrator
+g, administrator, member
+g, member, guest

@@ -1,0 +1,5 @@
+Un e-mail pour vérifier votre adresse e-mail a été envoyé à l'adresse e-mail ({{EmailAddress}}) de ({{FromEmailAddress}}).
+Veuillez vous connecter à ce compte de messagerie et appuyer sur le lien de vérification de l'adresse e-mail figurant sur cet e-mail.
+N'oubliez pas de vérifier votre filtre de courrier indésirable, car l'e-mail a peut-être été accidentellement stocké dans ce dossier.
+Si l'e-mail a été marqué comme indésirable et que vous utilisez l'un des services d'hébergement de messagerie les plus populaires tels que Hotmail ou Gmail, vous pouvez ajouter ({{FromEmailAddress}}) à votre carnet d'adresses et aux expéditeurs approuvés pour éviter que ce problème ne se reproduise.
+Si après 24 heures vous ne recevez pas d'e-mail, veuillez nous contacter.

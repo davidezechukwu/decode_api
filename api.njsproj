@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>api</Name>
+    <RootNamespace>api</RootNamespace>
+    <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
+    <Environment>
+    </Environment>
+    <LaunchUrl>https://decodelocal.com/api/explorer/</LaunchUrl>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>6b8c6168-2247-419d-b055-811212dc0b63</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>dist\index.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>443</NodejsPort>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>True</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".dockerignore" />
+    <Content Include=".env" />
+    <Content Include=".eslintignore" />
+    <Content Include=".eslintrc.js" />
+    <Content Include=".gitignore" />
+    <Content Include=".mocharc.json" />
+    <Content Include=".npmrc" />
+    <Content Include=".prettierignore" />
+    <Content Include=".prettierrc" />
+    <Content Include=".vscode\README.md">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include=".vscode\settings.json" />
+    <Content Include=".yo-rc.json" />
+    <Content Include="db-migrate.dockerfile" />
+    <Content Include="decodeonline.app.AzurePipeline.yml" />
+    <Content Include="ecosystem.config.js" />
+    <Content Include="email-notification-worker-crontab" />
+    <Content Include="email-notification-worker.dockerfile" />
+    <Content Include="git.commit.template.txt" />
+    <Content Include="set-up-port-forwarding-for-wsl2.ps1" />
+    <Content Include="src\_infrastructure\certificates\decodelocal.com\decodelocal.com.chained.crt" />
+    <Content Include="src\_infrastructure\certificates\decodelocal.com\decodelocal.com.crt" />
+    <Content Include="src\_infrastructure\certificates\decodelocal.com\decodelocal.com.key" />
+    <Content Include="src\_infrastructure\docker\os\linux\build-agent.service" />
+    <Content Include="src\_infrastructure\docker\os\linux\buildagent.service" />
+    <Content Include="src\_infrastructure\docker\os\linux\decodeonline-build-agent.service" />
+    <Content Include="src\_infrastructure\docker\os\linux\hosts.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\changepasswordnotification\changepasswordnotification_inapp_en.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\changepasswordnotification\changepasswordnotification_inapp_en.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\changepasswordnotification\changepasswordnotification_inapp_fr.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\changepasswordnotification\changepasswordnotification_inapp_fr.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\changepasswordnotification\changepasswordnotification_inapp_pa.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\changepasswordnotification\changepasswordnotification_inapp_pa.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\changepasswordnotification\changepasswordnotification_inapp_ur.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\changepasswordnotification\changepasswordnotification_inapp_ur.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\changepasswordnotification\changepasswordnotification_sms_en.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\changepasswordnotification\changepasswordnotification_sms_en.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\changepasswordnotification\changepasswordnotification_sms_fr.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\changepasswordnotification\changepasswordnotification_sms_fr.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\changepasswordnotification\changepasswordnotification_sms_pa.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\changepasswordnotification\changepasswordnotification_sms_pa.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\changepasswordnotification\changepasswordnotification_sms_ur.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\changepasswordnotification\changepasswordnotification_sms_ur.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\forgotpasswordnotification\forgotpasswordnotification_email_en.html" />
+    <Content Include="src\_infrastructure\fixtures\templates\forgotpasswordnotification\forgotpasswordnotification_email_fr.html" />
+    <Content Include="src\_infrastructure\fixtures\templates\forgotpasswordnotification\forgotpasswordnotification_email_pa.html" />
+    <Content Include="src\_infrastructure\fixtures\templates\forgotpasswordnotification\forgotpasswordnotification_email_ur.html" />
+    <Content Include="src\_infrastructure\fixtures\templates\forgotpasswordnotification\forgotpasswordnotification_inapp_en.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\forgotpasswordnotification\forgotpasswordnotification_inapp_fr.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\forgotpasswordnotification\forgotpasswordnotification_inapp_pa.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\forgotpasswordnotification\forgotpasswordnotification_inapp_ur.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\forgotpasswordnotification\forgotpasswordnotification_sms_en.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\forgotpasswordnotification\forgotpasswordnotification_sms_fr.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\forgotpasswordnotification\forgotpasswordnotification_sms_pa.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\forgotpasswordnotification\forgotpasswordnotification_sms_ur.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\loginnotification\loginnotification_inapp_en.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\loginnotification\loginnotification_inapp_fr.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\loginnotification\loginnotification_inapp_pa.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\loginnotification\loginnotification_inapp_ur.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\noprimaryemailaddressnotification\noprimaryemailaddressnotification_email_en.html" />
+    <Content Include="src\_infrastructure\fixtures\templates\noprimaryemailaddressnotification\noprimaryemailaddressnotification_email_fr.html" />
+    <Content Include="src\_infrastructure\fixtures\templates\noprimaryemailaddressnotification\noprimaryemailaddressnotification_email_pa.html" />
+    <Content Include="src\_infrastructure\fixtures\templates\noprimaryemailaddressnotification\noprimaryemailaddressnotification_email_ur.html" />
+    <Content Include="src\_infrastructure\fixtures\templates\noprimaryemailaddressnotification\noprimaryemailaddressnotification_inapp_en.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\noprimaryemailaddressnotification\noprimaryemailaddressnotification_inapp_fr.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\noprimaryemailaddressnotification\noprimaryemailaddressnotification_inapp_pa.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\noprimaryemailaddressnotification\noprimaryemailaddressnotification_inapp_ur.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\noprimaryemailaddressnotification\noprimaryemailaddressnotification_sms_en.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\noprimaryemailaddressnotification\noprimaryemailaddressnotification_sms_fr.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\noprimaryemailaddressnotification\noprimaryemailaddressnotification_sms_pa.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\noprimaryemailaddressnotification\noprimaryemailaddressnotification_sms_ur.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\passwordchangednotification\passwordchangednotification_inapp_en.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\passwordchangednotification\passwordchangednotification_inapp_fr.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\passwordchangednotification\passwordchangednotification_inapp_pa.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\passwordchangednotification\passwordchangednotification_inapp_ur.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\passwordresetnotification\passwordresetnotification_inapp_en.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\passwordresetnotification\passwordresetnotification_inapp_fr.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\passwordresetnotification\passwordresetnotification_inapp_pa.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\passwordresetnotification\passwordresetnotification_inapp_ur.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\thankyouforverifyingyouremailaddressnotification\thankyouforverifyingyouremailaddressnotification_inapp_en.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\thankyouforverifyingyouremailaddressnotification\thankyouforverifyingyouremailaddressnotification_inapp_fr.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\thankyouforverifyingyouremailaddressnotification\thankyouforverifyingyouremailaddressnotification_inapp_pa.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\thankyouforverifyingyouremailaddressnotification\thankyouforverifyingyouremailaddressnotification_inapp_ur.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\thankyouforverifyingyourphonenumbernotification\thankyouforverifyingyourphonenumbernotification_inapp_en.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\thankyouforverifyingyourphonenumbernotification\thankyouforverifyingyourphonenumbernotification_inapp_fr.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\thankyouforverifyingyourphonenumbernotification\thankyouforverifyingyourphonenumbernotification_inapp_pa.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\thankyouforverifyingyourphonenumbernotification\thankyouforverifyingyourphonenumbernotification_inapp_ur.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\verifyemailaddressnotification\verifyemailaddressnotification_email_en.html" />
+    <Content Include="src\_infrastructure\fixtures\templates\verifyemailaddressnotification\verifyemailaddressnotification_email_fr.html" />
+    <Content Include="src\_infrastructure\fixtures\templates\verifyemailaddressnotification\verifyemailaddressnotification_email_pa.html" />
+    <Content Include="src\_infrastructure\fixtures\templates\verifyemailaddressnotification\verifyemailaddressnotification_email_ur.html" />
+    <Content Include="src\_infrastructure\fixtures\templates\verifyemailaddressnotification\verifyemailaddressnotification_inapp_en.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\verifyemailaddressnotification\verifyemailaddressnotification_inapp_fr.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\verifyemailaddressnotification\verifyemailaddressnotification_inapp_pa.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\verifyemailaddressnotification\verifyemailaddressnotification_inapp_ur.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\verifyemailaddressnotification\verifyemailaddressnotification_sms_en.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\verifyemailaddressnotification\verifyemailaddressnotification_sms_fr.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\verifyemailaddressnotification\verifyemailaddressnotification_sms_pa.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\verifyemailaddressnotification\verifyemailaddressnotification_sms_ur.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\verifyphonenumbernotification\verifyphonenumbernotification_inapp_en.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\verifyphonenumbernotification\verifyphonenumbernotification_inapp_fr.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\verifyphonenumbernotification\verifyphonenumbernotification_inapp_pa.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\verifyphonenumbernotification\verifyphonenumbernotification_inapp_ur.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\verifyphonenumbernotification\verifyphonenumbernotification_sms_en.txt">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\_infrastructure\fixtures\templates\verifyphonenumbernotification\verifyphonenumbernotification_sms_fr.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\verifyphonenumbernotification\verifyphonenumbernotification_sms_pa.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\verifyphonenumbernotification\verifyphonenumbernotification_sms_ur.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\welcomenotification\welcomenotification_email_ur.html" />
+    <Content Include="src\_infrastructure\fixtures\templates\welcomenotification\welcomenotification_email_en.html" />
+    <Content Include="src\_infrastructure\fixtures\templates\welcomenotification\welcomenotification_email_fr.html" />
+    <Content Include="src\_infrastructure\fixtures\templates\welcomenotification\welcomenotification_email_pa.html" />
+    <Content Include="src\_infrastructure\fixtures\templates\welcomenotification\welcomenotification_inapp_en.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\welcomenotification\welcomenotification_inapp_fr.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\welcomenotification\welcomenotification_inapp_pa.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\welcomenotification\welcomenotification_inapp_ur.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\welcomenotification\welcomenotification_sms_fr.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\welcomenotification\welcomenotification_sms_en.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\welcomenotification\welcomenotification_sms_ur.txt" />
+    <Content Include="src\_infrastructure\fixtures\templates\welcomenotification\welcomenotification_sms_pa.txt" />
+    <Content Include="sms-notification-worker-crontab" />
+    <Content Include="sms-notification-worker.dockerfile" />
+    <Content Include="src\_infrastructure\azure\clean-up-after-cd.sh" />
+    <Content Include="src\_infrastructure\azure\start-api.sh" />
+    <Content Include="src\_infrastructure\azure\start-docker-compose.sh">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\_infrastructure\docker\.dockerignore" />
+    <Content Include="src\_infrastructure\docker\database\postgres\create.sql" />
+    <Content Include="src\_infrastructure\docker\database\sqlserver\create.sh" />
+    <Content Include="src\_infrastructure\docker\database\sqlserver\create.sql" />
+    <Content Include="src\_infrastructure\docker\database\sqlserver\start.sh" />
+    <Content Include="src\_infrastructure\docker\docker-api.dockerfile" />
+    <Content Include="src\_infrastructure\docker\docker-compose.yml" />
+    <Content Include="src\_infrastructure\docker\docker-dev-sql-server-create.dockerfile" />
+    <Content Include="src\_infrastructure\docker\os\linux\docker-compose-up.service">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\_infrastructure\docker\os\linux\installdocker.sh">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\_infrastructure\docker\os\linux\wait-for-it.sh" />
+    <Content Include="src\_infrastructure\docker\os\windows\hosts.txt" />
+    <Content Include="src\_infrastructure\docker\os\windows\set-up-port-forwarding-for-wsl2.ps1" />
+    <Content Include="src\_infrastructure\fixtures\casbin\rbac_model.conf" />
+    <Content Include="src\_infrastructure\fixtures\casbin\rbac_policy_administrator.csv" />
+    <Content Include="src\_infrastructure\fixtures\casbin\rbac_policy_guest.csv" />
+    <Content Include="src\_infrastructure\fixtures\casbin\rbac_policy_member.csv" />
+    <Content Include="src\_infrastructure\fixtures\certificates\decodelocal.com.chained.crt" />
+    <Content Include="src\_infrastructure\fixtures\certificates\decodelocal.com.crt" />
+    <Content Include="src\_infrastructure\fixtures\certificates\decodelocal.com.key" />
+    <Content Include="src\_infrastructure\kubernetes\todo.txt" />
+    <Content Include="src\_infrastructure\usefulpsscripts\gettenantname.ps1" />
+    <Content Include="src\_infrastructure\usefulsqlscripts\AllUserRecords.sql" />
+    <Content Include="src\_infrastructure\usefulsqlscripts\CreateAllDatabaseObjects.sql" />
+    <Content Include="src\_infrastructure\usefulsqlscripts\delete_user_records.sql" />
+    <Content Include="src\_infrastructure\usefulsqlscripts\lookups.sql" />
+    <Content Include="src\_infrastructure\usefulsqlscripts\notifications.sql" />
+    <Content Include="src\_infrastructure\usefulsqlscripts\SeedTaxonomy.sql" />
+    <Content Include="src\_infrastructure\visualstudio\visualstudio.vssettings" />
+    <Content Include="src\_public\docs\.nojekyll" />
+    <Content Include="src\_public\docs\assets\highlight.css" />
+    <Content Include="src\_public\docs\assets\main.js" />
+    <Content Include="src\_public\docs\assets\navigation.js" />
+    <Content Include="src\_public\docs\assets\search.js" />
+    <Content Include="src\_public\docs\assets\style.css" />
+    <Content Include="src\_public\docs\classes\controllers.ExternalLoginController.html" />
+    <Content Include="src\_public\docs\classes\controllers.GroupController.html" />
+    <Content Include="src\_public\docs\classes\controllers.HealthStatusController.html" />
+    <Content Include="src\_public\docs\classes\controllers.LoginController.html" />
+    <Content Include="src\_public\docs\classes\controllers.LogoutController.html" />
+    <Content Include="src\_public\docs\classes\controllers.RegisterController.html" />
+    <Content Include="src\_public\docs\classes\controllers.ResetPasswordController.html" />
+    <Content Include="src\_public\docs\classes\controllers.RoleController.html" />
+    <Content Include="src\_public\docs\classes\controllers.SuperController.html" />
+    <Content Include="src\_public\docs\classes\controllers.UserCommunicationPreferencesController.html" />
+    <Content Include="src\_public\docs\classes\controllers.UserController.html" />
+    <Content Include="src\_public\docs\classes\controllers.UserDisplaySettingsController.html" />
+    <Content Include="src\_public\docs\classes\controllers.UserEmailAddressController.html" />
+    <Content Include="src\_public\docs\classes\controllers.UserGroupNotificationController.html" />
+    <Content Include="src\_public\docs\classes\controllers.UserLoginController.html" />
+    <Content Include="src\_public\docs\classes\controllers.UserNameController.html" />
+    <Content Include="src\_public\docs\classes\controllers.UserNotificationController.html" />
+    <Content Include="src\_public\docs\classes\controllers.UserPhoneNumberController.html" />
+    <Content Include="src\_public\docs\classes\controllers_lookup.LookupController.html" />
+    <Content Include="src\_public\docs\classes\datasources.CoreDataSource.html" />
+    <Content Include="src\_public\docs\classes\dtobjects.HealthStatusResponse.html" />
+    <Content Include="src\_public\docs\classes\dtobjects.LoginRequest.html" />
+    <Content Include="src\_public\docs\classes\dtobjects.LookupCategoryRequest.html" />
+    <Content Include="src\_public\docs\classes\dtobjects.LookupCurrencyResponse.html" />
+    <Content Include="src\_public\docs\classes\dtobjects.LookupLanguageResponse.html" />
+    <Content Include="src\_public\docs\classes\dtobjects.LookupNameValueResponse.html" />
+    <Content Include="src\_public\docs\classes\dtobjects.LookupRequest.html" />
+    <Content Include="src\_public\docs\classes\dtobjects.NotificationRequest.html" />
+    <Content Include="src\_public\docs\classes\dtobjects.PingResponse.html" />
+    <Content Include="src\_public\docs\classes\dtobjects.RegisterRequest.html" />
+    <Content Include="src\_public\docs\classes\dtobjects.ResetPasswordRequest.html" />
+    <Content Include="src\_public\docs\classes\dtobjects.SuperRequest.html" />
+    <Content Include="src\_public\docs\classes\dtobjects.SuperRequestWithLocaleAndDevice.html" />
+    <Content Include="src\_public\docs\classes\dtobjects.UserCommunicationPreferencesRequest.html" />
+    <Content Include="src\_public\docs\classes\dtobjects.UserEmailAddressRequest.html" />
+    <Content Include="src\_public\docs\classes\dtobjects.UserGroupAndRoleResponse.html" />
+    <Content Include="src\_public\docs\classes\dtobjects.UserPhoneNumberRequest.html" />
+    <Content Include="src\_public\docs\classes\dtobjects.UserResponse.html" />
+    <Content Include="src\_public\docs\classes\dtobjects.WhoAmIResponse.html" />
+    <Content Include="src\_public\docs\classes\index.Api.html" />
+    <Content Include="src\_public\docs\classes\index.ExpressServer.html" />
+    <Content Include="src\_public\docs\classes\index.SuperApplication.html" />
+    <Content Include="src\_public\docs\classes\index.SuperBindings.html" />
+    <Content Include="src\_public\docs\classes\interceptors.RequestValidatorInterceptor.html" />
+    <Content Include="src\_public\docs\classes\interceptors.SwaggerBugInterceptor.html" />
+    <Content Include="src\_public\docs\classes\models.GroupModel.html" />
+    <Content Include="src\_public\docs\classes\models.GroupNotificationModel.html" />
+    <Content Include="src\_public\docs\classes\models.LookupCategoryModel.html" />
+    <Content Include="src\_public\docs\classes\models.LookupModel.html" />
+    <Content Include="src\_public\docs\classes\models.RoleModel.html" />
+    <Content Include="src\_public\docs\classes\models.SuperModel.html" />
+    <Content Include="src\_public\docs\classes\models.UserCommunicationPreferencesModel.html" />
+    <Content Include="src\_public\docs\classes\models.UserDisplaySettingsModel.html" />
+    <Content Include="src\_public\docs\classes\models.UserEmailAddressModel.html" />
+    <Content Include="src\_public\docs\classes\models.UserGroupModel.html" />
+    <Content Include="src\_public\docs\classes\models.UserGroupRoleModel.html" />
+    <Content Include="src\_public\docs\classes\models.UserLoginModel.html" />
+    <Content Include="src\_public\docs\classes\models.UserLogonModel.html" />
+    <Content Include="src\_public\docs\classes\models.UserModel.html" />
+    <Content Include="src\_public\docs\classes\models.UserNameModel.html" />
+    <Content Include="src\_public\docs\classes\models.UserNotificationModel.html" />
+    <Content Include="src\_public\docs\classes\models.UserPasswordModel.html" />
+    <Content Include="src\_public\docs\classes\models.UserPhoneNumberModel.html" />
+    <Content Include="src\_public\docs\classes\models.UserPhotoModel.html" />
+    <Content Include="src\_public\docs\classes\models.UserWebLinkModel.html" />
+    <Content Include="src\_public\docs\classes\parsers.JSONParser.html" />
+    <Content Include="src\_public\docs\classes\parsers.MultiPartParser.html" />
+    <Content Include="src\_public\docs\classes\parsers.XMLParser.html" />
+    <Content Include="src\_public\docs\classes\repositories.GroupNotificationRepositoryService.html" />
+    <Content Include="src\_public\docs\classes\repositories.GroupRepositoryService.html" />
+    <Content Include="src\_public\docs\classes\repositories.LookupCategoryRepositoryService.html" />
+    <Content Include="src\_public\docs\classes\repositories.LookupRepositoryService.html" />
+    <Content Include="src\_public\docs\classes\repositories.RoleRepositoryService.html" />
+    <Content Include="src\_public\docs\classes\repositories.SuperModelRepositoryService.html" />
+    <Content Include="src\_public\docs\classes\repositories.UserCommunicationPreferencesRepositoryService.html" />
+    <Content Include="src\_public\docs\classes\repositories.UserDisplaySettingsRepositoryService.html" />
+    <Content Include="src\_public\docs\classes\repositories.UserEmailAddressRepositoryService.html" />
+    <Content Include="src\_public\docs\classes\repositories.UserGroupRepositoryService.html" />
+    <Content Include="src\_public\docs\classes\repositories.UserGroupRoleRepositoryService.html" />
+    <Content Include="src\_public\docs\classes\repositories.UserLoginRepositoryService.html" />
+    <Content Include="src\_public\docs\classes\repositories.UserLogonRepositoryService.html" />
+    <Content Include="src\_public\docs\classes\repositories.UserNameRepositoryService.html" />
+    <Content Include="src\_public\docs\classes\repositories.UserNotificationRepositoryService.html" />
+    <Content Include="src\_public\docs\classes\repositories.UserPasswordRepositoryService.html" />
+    <Content Include="src\_public\docs\classes\repositories.UserPhoneNumberRepositoryService.html" />
+    <Content Include="src\_public\docs\classes\repositories.UserPhotoRepositoryService.html" />
+    <Content Include="src\_public\docs\classes\repositories.UserRepositoryService.html" />
+    <Content Include="src\_public\docs\classes\repositories.UserWebLinkRepositoryService.html" />
+    <Content Include="src\_public\docs\classes\sequence.SuperSendSequenceStep.html" />
+    <Content Include="src\_public\docs\classes\sequence.SuperSendSequenceStepProvider.html" />
+    <Content Include="src\_public\docs\classes\sequence.SuperSequence.html" />
+    <Content Include="src\_public\docs\classes\services.AuthenticationService.html" />
+    <Content Include="src\_public\docs\classes\services.AuthorizationService.html" />
+    <Content Include="src\_public\docs\classes\services.CasbinService.html" />
+    <Content Include="src\_public\docs\classes\services.EmailNotificationStrategy.html" />
+    <Content Include="src\_public\docs\classes\services.ExternalUserIdentityService.html" />
+    <Content Include="src\_public\docs\classes\services.FaceBookAuthenticationPassportStrategyProvider.html" />
+    <Content Include="src\_public\docs\classes\services.FaceBookAuthenticationStrategy.html" />
+    <Content Include="src\_public\docs\classes\services.GeoLocationService.html" />
+    <Content Include="src\_public\docs\classes\services.GoogleAuthenticationPassportStrategyProvider.html" />
+    <Content Include="src\_public\docs\classes\services.GoogleAuthenticationStrategy.html" />
+    <Content Include="src\_public\docs\classes\services.InAppNotificationStrategy.html" />
+    <Content Include="src\_public\docs\classes\services.JWTAuthenticationStrategy.html" />
+    <Content Include="src\_public\docs\classes\services.JWTAuthenticationStrategyProvider.html" />
+    <Content Include="src\_public\docs\classes\services.LinkedInAuthenticationPassportStrategyProvider.html" />
+    <Content Include="src\_public\docs\classes\services.LinkedInAuthenticationStrategy.html" />
+    <Content Include="src\_public\docs\classes\services.LocalAuthenticationPassportStrategyProvider.html" />
+    <Content Include="src\_public\docs\classes\services.LocalAuthenticationStrategy.html" />
+    <Content Include="src\_public\docs\classes\services.LookupService.html" />
+    <Content Include="src\_public\docs\classes\services.NotificationService.html" />
+    <Content Include="src\_public\docs\classes\services.SessionAuthenticationStrategy.html" />
+    <Content Include="src\_public\docs\classes\services.SMSNotificationStrategy.html" />
+    <Content Include="src\_public\docs\classes\services.SuperAuthenticationStrategy.html" />
+    <Content Include="src\_public\docs\classes\services.SuperNotificationStrategy.html" />
+    <Content Include="src\_public\docs\classes\services.SuperService.html" />
+    <Content Include="src\_public\docs\classes\services.TwitterAuthenticationPassportStrategyProvider.html" />
+    <Content Include="src\_public\docs\classes\services.TwitterAuthenticationStrategy.html" />
+    <Content Include="src\_public\docs\classes\services.UserService.html" />
+    <Content Include="src\_public\docs\classes\utils.LocalisationUtils.html" />
+    <Content Include="src\_public\docs\classes\utils.RestUtils.html" />
+    <Content Include="src\_public\docs\classes\utils.SchemaUtils.html" />
+    <Content Include="src\_public\docs\classes\workers.EmailNotificationWorker.html" />
+    <Content Include="src\_public\docs\classes\workers.SMSNotificationWorker.html" />
+    <Content Include="src\_public\docs\classes\workers.SuperWorker.html" />
+    <Content Include="src\_public\docs\enums\services.NOTIFICATION_STATUS.html" />
+    <Content Include="src\_public\docs\functions\decorators.ModelDecorator.html" />
+    <Content Include="src\_public\docs\functions\decorators.PropertyDecorator.html" />
+    <Content Include="src\_public\docs\functions\decorators.SensitivePropertyDecorator.html" />
+    <Content Include="src\_public\docs\functions\index.GetConfigurationFromEnv.html" />
+    <Content Include="src\_public\docs\functions\index.main.html" />
+    <Content Include="src\_public\docs\hierarchy.html" />
+    <Content Include="src\_public\docs\index.html" />
+    <Content Include="src\_public\docs\interfaces\index.IdataSourceConfig.html" />
+    <Content Include="src\_public\docs\interfaces\services.INotifications.html" />
+    <Content Include="src\_public\docs\interfaces\services.INotificationStrategy.html" />
+    <Content Include="src\_public\docs\modules\controllers.html" />
+    <Content Include="src\_public\docs\modules\controllers_healthstatus.html" />
+    <Content Include="src\_public\docs\modules\controllers_lookup.html" />
+    <Content Include="src\_public\docs\modules\controllers_security.html" />
+    <Content Include="src\_public\docs\modules\controllers_user.html" />
+    <Content Include="src\_public\docs\modules\datasources.html" />
+    <Content Include="src\_public\docs\modules\decorators.html" />
+    <Content Include="src\_public\docs\modules\dtobjects.html" />
+    <Content Include="src\_public\docs\modules\dtobjects_requests.html" />
+    <Content Include="src\_public\docs\modules\dtobjects_responses.html" />
+    <Content Include="src\_public\docs\modules\index.html" />
+    <Content Include="src\_public\docs\modules\interceptors.html" />
+    <Content Include="src\_public\docs\modules\models.html" />
+    <Content Include="src\_public\docs\modules\parsers.html" />
+    <Content Include="src\_public\docs\modules\repositories.html" />
+    <Content Include="src\_public\docs\modules\sequence.html" />
+    <Content Include="src\_public\docs\modules\services.html" />
+    <Content Include="src\_public\docs\modules\services_geolocation.html" />
+    <Content Include="src\_public\docs\modules\services_lookup.html" />
+    <Content Include="src\_public\docs\modules\services_notification.html" />
+    <Content Include="src\_public\docs\modules\services_notification_strategies.html" />
+    <Content Include="src\_public\docs\modules\services_security.html" />
+    <Content Include="src\_public\docs\modules\services_security_strategies.html" />
+    <Content Include="src\_public\docs\modules\services_user.html" />
+    <Content Include="src\_public\docs\modules\utils.html" />
+    <Content Include="src\_public\docs\modules\workers.html" />
+    <Content Include="src\_public\docs\types\index.ConfigurationType.html" />
+    <Content Include="src\_public\docs\types\index.Device.html" />
+    <Content Include="src\_public\docs\types\index.Devices.html" />
+    <Content Include="src\_public\docs\types\index.DigestAlgorithm.html" />
+    <Content Include="src\_public\docs\types\index.EnvironmentName.html" />
+    <Content Include="src\_public\docs\types\index.GroupNames.html" />
+    <Content Include="src\_public\docs\types\index.Locale.html" />
+    <Content Include="src\_public\docs\types\index.Locales.html" />
+    <Content Include="src\_public\docs\types\index.LocalStrategyOptions.html" />
+    <Content Include="src\_public\docs\types\index.RoleNames.html" />
+    <Content Include="src\_public\docs\types\index.ShutDownSignals.html" />
+    <Content Include="src\_public\docs\types\index.StrategyOptionsType.html" />
+    <Content Include="src\_public\docs\types\services.NotificationStrategyType.html" />
+    <Content Include="src\_public\docs\variables\datasources.SQLMigrations.html" />
+    <Content Include="src\_public\docs\variables\index.Configuration.html" />
+    <Content Include="src\_public\docs\variables\index.provider.html" />
+    <Content Include="src\_public\docs\variables\index.providerSecret.html" />
+    <Content Include="src\_public\docs\variables\repositories.SuperModelRepositoryServiceErrors.html" />
+    <Content Include="src\_public\docs\variables\services.AuthenticationServiceErrors.html" />
+    <Content Include="src\_public\docs\variables\services.LookupServiceErrors.html" />
+    <Content Include="src\_public\images\favicon.ico" />
+    <Content Include="src\_public\images\big_logo.jpg" />
+    <Content Include="src\_public\images\small_logo.jpg" />
+    <Content Include="src\_public\images\We_are_so_glad_you_are_here.jpg" />
+    <Content Include="src\_public\stylesheets\main.css" />
+    <Content Include="src\controllers\healthstatus\HealthStatusResponse.xslt" />
+    <Content Include="src\controllers\healthstatus\PingResponse.xslt" />
+    <Content Include="src\controllers\healthstatus\WhoAmIResponse.xslt" />
+    <Content Include="src\datasources\README.md" />
+    <Content Include="src\Swagger.html.ejs" />
+    <Content Include="src\parsers\README.md" />
+    <Content Include="tsconfig.json" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="typedoc.json" />
+    <Content Include="src\_views\index.pug" />
+    <Content Include="src\_views\layout.pug" />
+    <Content Include="src\_views\error.pug" />
+    <Content Include="_tests\dummy.js">
+      <SubType>Code</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vscode\" />
+    <Folder Include="src\types\" />
+    <Folder Include="src\_infrastructure\certificates\" />
+    <Folder Include="src\_infrastructure\certificates\decodelocal.com\" />
+    <Folder Include="src\dtobjects\requests\" />
+    <Folder Include="src\dtobjects\responses\" />
+    <Folder Include="src\services\geolocation\" />
+    <Folder Include="src\services\notification\strategies\" />
+    <Folder Include="src\_infrastructure\azure\" />
+    <Folder Include="src\_infrastructure\fixtures\certificates\" />
+    <Folder Include="src\_infrastructure\fixtures\templates\changepasswordnotification\" />
+    <Folder Include="src\_infrastructure\fixtures\templates\changepasswordnotification\" />
+    <Folder Include="src\_infrastructure\fixtures\templates\loginnotification\" />
+    <Folder Include="src\_infrastructure\fixtures\templates\loginonnewdevicenotification\" />
+    <Folder Include="src\_infrastructure\fixtures\templates\loginonnewlocationnotification\" />
+    <Folder Include="src\_infrastructure\fixtures\templates\forgotpasswordnotification\" />
+    <Folder Include="src\_infrastructure\fixtures\templates\passwordresetnotification\" />
+    <Folder Include="src\_infrastructure\fixtures\templates\thankyouforverifyingyouremailaddressnotification\" />
+    <Folder Include="src\_infrastructure\fixtures\templates\passwordchangednotification\" />
+    <Folder Include="src\_infrastructure\fixtures\templates\nolocallogonnotification\" />
+    <Folder Include="src\_infrastructure\fixtures\templates\noprimaryemailaddressnotification\" />
+    <Folder Include="src\_infrastructure\fixtures\templates\thankyouforverifyingyourphonenumbernotification\" />
+    <Folder Include="src\_infrastructure\fixtures\templates\verifyphonenumbernotification\" />
+    <Folder Include="src\_infrastructure\fixtures\templates\verifyemailaddressnotification\" />
+    <Folder Include="src\_infrastructure\fixtures\templates\welcomenotification\" />
+    <Folder Include="src\_infrastructure\sqlservertraces\" />
+    <Folder Include="src\_infrastructure\usefulunixscripts\" />
+    <Folder Include="src\_infrastructure\nginx\" />
+    <Folder Include="src\_infrastructure\usefulpsscripts\" />
+    <Folder Include="src\_infrastructure\visualstudio\" />
+    <Folder Include="src\_public\docs\" />
+    <Folder Include="src\_public\docs\assets\" />
+    <Folder Include="src\_public\docs\classes\" />
+    <Folder Include="src\_public\docs\enums\" />
+    <Folder Include="src\_public\docs\functions\" />
+    <Folder Include="src\_public\docs\interfaces\" />
+    <Folder Include="src\_public\docs\modules\" />
+    <Folder Include="src\_public\docs\types\" />
+    <Folder Include="src\_public\docs\variables\" />
+    <Folder Include="src\_public\javascript\" />
+    <Folder Include="_tests\" />
+    <Folder Include="src\controllers\lookup\" />
+    <Folder Include="src\controllers\security\" />
+    <Folder Include="src\models\" />
+    <Folder Include="src\services\notification\" />
+    <Folder Include="src\services\security\" />
+    <Folder Include="src\services\security\strategies\" />
+    <Folder Include="src\workers\" />
+    <Folder Include="src\_infrastructure\" />
+    <Folder Include="src\_infrastructure\docker\" />
+    <Folder Include="src\_infrastructure\docker\database\" />
+    <Folder Include="src\_infrastructure\docker\database\postgres\" />
+    <Folder Include="src\_infrastructure\docker\database\sqlserver\" />
+    <Folder Include="src\_infrastructure\docker\os\" />
+    <Folder Include="src\_infrastructure\docker\os\linux\" />
+    <Folder Include="src\_infrastructure\docker\os\windows\" />
+    <Folder Include="src\_infrastructure\fixtures\" />
+    <Folder Include="src\_infrastructure\fixtures\casbin\" />
+    <Folder Include="src\_infrastructure\fixtures\localisation\" />
+    <Folder Include="src\_infrastructure\fixtures\templates\" />
+    <Folder Include="src\_infrastructure\kubernetes\" />
+    <Folder Include="src\_infrastructure\migrations\" />
+    <Folder Include="src\_infrastructure\usefulsqlscripts\" />
+    <Folder Include="src\_public\" />
+    <Folder Include="src\_public\images\" />
+    <Folder Include="src\_public\movies\" />
+    <Folder Include="src\_public\stylesheets\" />
+    <Folder Include="src\controllers\user\" />
+    <Folder Include="src\decorators\" />
+    <Folder Include="src\dtobjects\" />
+    <Folder Include="src\services\lookup\" />
+    <Folder Include="src\controllers\healthstatus\" />
+    <Folder Include="src\" />
+    <Folder Include="src\controllers\" />
+    <Folder Include="src\datasources\" />
+    <Folder Include="src\interceptors\" />
+    <Folder Include="src\parsers\" />
+    <Folder Include="src\repositories\" />
+    <Folder Include="src\sequence\" />
+    <Folder Include="src\services\" />
+    <Folder Include="src\services\user\" />
+    <Folder Include="src\utils\" />
+    <Folder Include="src\_views\" />
+    <Folder Include="_tests\coverage\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\Api.ts" />
+    <TypeScriptCompile Include="src\controllers\security\ExternalLoginController.ts" />
+    <TypeScriptCompile Include="src\controllers\security\GroupController.ts" />
+    <TypeScriptCompile Include="src\controllers\security\index.ts" />
+    <TypeScriptCompile Include="src\controllers\security\LoginController.ts" />
+    <TypeScriptCompile Include="src\controllers\security\LogoutController.ts" />
+    <TypeScriptCompile Include="src\controllers\security\RegisterController.ts" />
+    <TypeScriptCompile Include="src\controllers\security\ForgotPasswordController.ts" />
+    <TypeScriptCompile Include="src\controllers\security\ResetPasswordController.ts" />
+    <TypeScriptCompile Include="src\controllers\security\RoleController.ts" />
+    <TypeScriptCompile Include="src\controllers\user\UserCommunicationPreferencesController.ts" />
+    <TypeScriptCompile Include="src\controllers\user\UserEmailAddressController.ts" />
+    <TypeScriptCompile Include="src\controllers\user\UserGroupNotificationController.ts" />
+    <TypeScriptCompile Include="src\controllers\user\UserLoginController.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\controllers\user\UserNameController.ts" />
+    <TypeScriptCompile Include="src\controllers\user\UserNotificationController.ts" />
+    <TypeScriptCompile Include="src\controllers\user\UserPasswordController.ts" />
+    <TypeScriptCompile Include="src\controllers\user\UserPhoneNumberController.ts" />
+    <TypeScriptCompile Include="src\controllers\user\UserDisplaySettingsController.ts" />
+    <TypeScriptCompile Include="src\datasources\SQLMigrations.ts" />
+    <TypeScriptCompile Include="src\decorators\PropertyDecorator.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\decorators\SensitivePropertyDecorator.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\dtobjects\requests\ChangePasswordRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\ForgotPasswordRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\index.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\LoginRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\LookupCategoryRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\LookupRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\NotificationRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\NotificationStatusUpdateRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\RegisterRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\ResetPasswordRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\SuperRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\SuperRequestWithLocaleAndDevice.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\UserCommunicationPreferencesRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\UserEmailAddressRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\UserNameRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\requests\UserPhoneNumberRequest.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\dtobjects\requests\UserDisplaySettingsRequest.ts" />
+    <TypeScriptCompile Include="src\dtobjects\responses\HealthStatusResponse.ts" />
+    <TypeScriptCompile Include="src\dtobjects\responses\index.ts" />
+    <TypeScriptCompile Include="src\dtobjects\responses\LookupCountryResponse.ts" />
+    <TypeScriptCompile Include="src\dtobjects\responses\LookupCurrencyResponse.ts" />
+    <TypeScriptCompile Include="src\dtobjects\responses\LookupLanguageResponse.ts" />
+    <TypeScriptCompile Include="src\dtobjects\responses\LookupNameValueResponse.ts" />
+    <TypeScriptCompile Include="src\dtobjects\responses\PingResponse.ts" />
+    <TypeScriptCompile Include="src\dtobjects\responses\UserResponse.ts" />
+    <TypeScriptCompile Include="src\dtobjects\responses\UserGroupAndRoleResponse.ts" />
+    <TypeScriptCompile Include="src\dtobjects\responses\WhoAmIResponse.ts" />
+    <TypeScriptCompile Include="src\models\GroupNotificationModel.ts" />
+    <TypeScriptCompile Include="src\models\UserCommunicationPreferencesModel.ts" />
+    <TypeScriptCompile Include="src\models\UserGroupModel.ts" />
+    <TypeScriptCompile Include="src\models\UserLoginModel.ts" />
+    <TypeScriptCompile Include="src\models\UserNotificationModel.ts" />
+    <TypeScriptCompile Include="src\models\GroupModel.ts" />
+    <TypeScriptCompile Include="src\models\RoleModel.ts" />
+    <TypeScriptCompile Include="src\models\UserGroupRoleModel.ts" />
+    <TypeScriptCompile Include="src\models\UserNameModel.ts" />
+    <TypeScriptCompile Include="src\controllers\lookup\index.ts" />
+    <TypeScriptCompile Include="src\controllers\lookup\LookupController.ts" />
+    <TypeScriptCompile Include="src\controllers\user\index.ts" />
+    <TypeScriptCompile Include="src\controllers\user\UserController.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\models\index.ts" />
+    <TypeScriptCompile Include="src\models\LookupCategoryModel.ts" />
+    <TypeScriptCompile Include="src\models\LookupModel.ts" />
+    <TypeScriptCompile Include="src\models\SuperModel.ts" />
+    <TypeScriptCompile Include="src\models\UserEmailAddressModel.ts" />
+    <TypeScriptCompile Include="src\models\UserLogonModel.ts" />
+    <TypeScriptCompile Include="src\models\UserModel.ts" />
+    <TypeScriptCompile Include="src\models\UserPasswordModel.ts" />
+    <TypeScriptCompile Include="src\models\UserPhoneNumberModel.ts" />
+    <TypeScriptCompile Include="src\models\UserPhotoModel.ts" />
+    <TypeScriptCompile Include="src\models\UserDisplaySettingsModel.ts" />
+    <TypeScriptCompile Include="src\models\UserWebLinkModel.ts" />
+    <TypeScriptCompile Include="src\dtobjects\index.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\controllers\healthstatus\HealthStatusController.ts" />
+    <TypeScriptCompile Include="src\controllers\healthstatus\index.ts" />
+    <TypeScriptCompile Include="src\controllers\index.ts" />
+    <TypeScriptCompile Include="src\controllers\SuperController.ts" />
+    <TypeScriptCompile Include="src\datasources\CoreDataSource.ts" />
+    <TypeScriptCompile Include="src\datasources\index.ts" />
+    <TypeScriptCompile Include="src\decorators\index.ts" />
+    <TypeScriptCompile Include="src\parsers\MultiPartParser.ts" />
+    <TypeScriptCompile Include="src\parsers\URLEncodedParser.ts" />
+    <TypeScriptCompile Include="src\repositories\GroupNotificationRepositoryService.ts" />
+    <TypeScriptCompile Include="src\repositories\GroupRepositoryService.ts" />
+    <TypeScriptCompile Include="src\repositories\RoleRepositoryService.ts" />
+    <TypeScriptCompile Include="src\repositories\UserCommunicationPreferencesRepositoryService.ts" />
+    <TypeScriptCompile Include="src\repositories\UserGroupRepositoryService.ts" />
+    <TypeScriptCompile Include="src\repositories\UserLoginRepositoryService.ts" />
+    <TypeScriptCompile Include="src\repositories\UserNotificationRepositoryService.ts" />
+    <TypeScriptCompile Include="src\repositories\UserGroupRoleRepositoryService.ts" />
+    <TypeScriptCompile Include="src\repositories\UserNameRepositoryService.ts" />
+    <TypeScriptCompile Include="src\repositories\UserPhoneNumberRepositoryService.ts" />
+    <TypeScriptCompile Include="src\services\geolocation\GeoLocationService.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\services\geolocation\index.ts" />
+    <TypeScriptCompile Include="src\services\lookup\index.ts" />
+    <TypeScriptCompile Include="src\services\lookup\LookupService.ts" />
+    <TypeScriptCompile Include="src\services\notification\index.ts" />
+    <TypeScriptCompile Include="src\services\notification\NotificationStatus.ts" />
+    <TypeScriptCompile Include="src\services\notification\NotificationService.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\services\notification\strategies\EmailNotificationStrategy.ts" />
+    <TypeScriptCompile Include="src\services\notification\strategies\InAppNotificationStrategy.ts" />
+    <TypeScriptCompile Include="src\services\notification\strategies\index.ts" />
+    <TypeScriptCompile Include="src\services\notification\INotifications.ts" />
+    <TypeScriptCompile Include="src\services\notification\strategies\INotificationStrategy.ts" />
+    <TypeScriptCompile Include="src\services\notification\strategies\SMSNotificationStrategy.ts" />
+    <TypeScriptCompile Include="src\services\notification\strategies\SuperNotificationStrategy.ts" />
+    <TypeScriptCompile Include="src\services\security\AuthenticationService.ts" />
+    <TypeScriptCompile Include="src\services\security\AuthorizationService.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\services\security\CasbinService.ts" />
+    <TypeScriptCompile Include="src\services\security\ExternalUserIdentityService.ts" />
+    <TypeScriptCompile Include="src\services\security\index.ts" />
+    <TypeScriptCompile Include="src\services\security\strategies\FaceBookAuthenticationStrategy.ts" />
+    <TypeScriptCompile Include="src\services\security\strategies\GoogleAuthenticationStrategy.ts" />
+    <TypeScriptCompile Include="src\services\security\strategies\index.ts" />
+    <TypeScriptCompile Include="src\services\security\strategies\JWTAuthenticationStrategy.ts" />
+    <TypeScriptCompile Include="src\services\security\strategies\LinkedInAuthenticationStrategy.ts" />
+    <TypeScriptCompile Include="src\services\security\strategies\LocalAuthenticationStrategy.ts" />
+    <TypeScriptCompile Include="src\services\security\strategies\SessionAuthenticationStrategy.ts" />
+    <TypeScriptCompile Include="src\services\security\strategies\SuperAuthenticationStrategy.ts" />
+    <TypeScriptCompile Include="src\services\security\strategies\TwitterAuthenticationStrategy.ts" />
+    <TypeScriptCompile Include="src\ExpressServer.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\index.ts" />
+    <TypeScriptCompile Include="src\interceptors\index.ts" />
+    <TypeScriptCompile Include="src\interceptors\RequestValidatorInterceptor.ts" />
+    <TypeScriptCompile Include="src\interceptors\SwaggerBugInterceptor.ts" />
+    <TypeScriptCompile Include="src\decorators\ModelDecorator.ts" />
+    <TypeScriptCompile Include="src\parsers\index.ts" />
+    <TypeScriptCompile Include="src\parsers\JSONParser.ts" />
+    <TypeScriptCompile Include="src\parsers\XMLParser.ts" />
+    <TypeScriptCompile Include="src\repositories\index.ts" />
+    <TypeScriptCompile Include="src\repositories\LookupCategoryRepositoryService.ts" />
+    <TypeScriptCompile Include="src\repositories\LookupRepositoryService.ts" />
+    <TypeScriptCompile Include="src\repositories\UserWebLinkRepositoryService.ts" />
+    <TypeScriptCompile Include="src\repositories\UserDisplaySettingsRepositoryService.ts" />
+    <TypeScriptCompile Include="src\repositories\UserPhotoRepositoryService.ts" />
+    <TypeScriptCompile Include="src\repositories\UserPasswordRepositoryService.ts" />
+    <TypeScriptCompile Include="src\repositories\UserRepositoryService.ts" />
+    <TypeScriptCompile Include="src\repositories\UserLogonRepositoryService.ts" />
+    <TypeScriptCompile Include="src\repositories\UserEmailAddressRepositoryService.ts" />
+    <TypeScriptCompile Include="src\repositories\SuperModelRepositoryService.ts" />
+    <TypeScriptCompile Include="src\sequence\index.ts" />
+    <TypeScriptCompile Include="src\sequence\SuperSendSequenceStep.ts" />
+    <TypeScriptCompile Include="src\sequence\SuperSequence.ts" />
+    <TypeScriptCompile Include="src\services\index.ts" />
+    <TypeScriptCompile Include="src\services\SuperService.ts" />
+    <TypeScriptCompile Include="src\services\user\index.ts" />
+    <TypeScriptCompile Include="src\services\user\UserService.ts" />
+    <TypeScriptCompile Include="src\Configuration.ts" />
+    <TypeScriptCompile Include="src\SuperApplication.ts" />
+    <TypeScriptCompile Include="src\SuperBindings.ts" />
+    <TypeScriptCompile Include="src\types\xslt3.d.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\utils\GlobalisationUtils.ts" />
+    <TypeScriptCompile Include="src\utils\index.ts" />
+    <TypeScriptCompile Include="src\utils\LocalisationUtils.ts" />
+    <TypeScriptCompile Include="src\utils\RestUtils.ts" />
+    <TypeScriptCompile Include="src\utils\SchemaUtils.ts" />
+    <TypeScriptCompile Include="src\workers\EmailNotificationWorker.ts" />
+    <TypeScriptCompile Include="src\workers\index.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\workers\SMSNotificationWorker.ts" />
+    <TypeScriptCompile Include="src\workers\SuperWorker.ts" />
+    <TypeScriptCompile Include="src\_infrastructure\fixtures\localisation\Lookups.ts" />
+    <TypeScriptCompile Include="src\_infrastructure\fixtures\localisation\Lookups_en_web.ts" />
+    <TypeScriptCompile Include="src\_infrastructure\fixtures\localisation\Lookups_fr_web.ts" />
+    <TypeScriptCompile Include="src\_infrastructure\fixtures\localisation\Lookups_pa_web.ts" />
+    <TypeScriptCompile Include="src\_infrastructure\fixtures\localisation\Lookups_ur_web.ts" />
+    <TypeScriptCompile Include="src\_infrastructure\migrations\firstrun.ts" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

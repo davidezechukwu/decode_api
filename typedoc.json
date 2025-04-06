@@ -1,0 +1,10 @@
+{
+    "entryPoints": ["src/**/index.ts"],
+    "entryPointStrategy":  "Expand",
+    "out": "./src/_public/docs",
+    "includeVersion": "true",
+    "excludeExternals":  "true",
+    "externalPattern":  ["./node_modules/**/*"],
+	 "readme": "README.md",     
+	 "logLevel": "Verbose"
+}

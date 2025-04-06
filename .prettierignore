@@ -1,0 +1,3 @@
+dist
+*.json
+src/_infrastructure/fixtures/localisation/*

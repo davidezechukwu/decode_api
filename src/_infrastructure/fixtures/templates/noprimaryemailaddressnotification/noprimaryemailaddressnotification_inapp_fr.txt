@@ -1,0 +1,2 @@
+Vous n'avez pas d'adresse e-mail principale. 
+<a target="_blank" href="{{HostUrl}}{{Locale}}/user/emailaddresses">Veuillez en ajouter un.</a>

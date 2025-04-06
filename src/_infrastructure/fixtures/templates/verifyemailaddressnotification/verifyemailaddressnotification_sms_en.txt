@@ -1,0 +1,1 @@
+Please verify your email address by clicking on the verify email address link on the Welcome email we sent you, on {{EmailAddress}}. 

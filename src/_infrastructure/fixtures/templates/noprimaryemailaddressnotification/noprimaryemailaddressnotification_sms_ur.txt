@@ -1,0 +1,2 @@
+آپ کے پاس بنیادی ای میل پتہ نہیں ہے۔
+<a target="_blank" href="{{HostUrl}}{{Locale}}/user/emailaddresses">براہ کرم ایک شامل کریں۔</a>

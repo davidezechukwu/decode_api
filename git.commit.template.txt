@@ -1,7 +1,7 @@
 NAME: [Ticket Name or Title]
 
 WHY:
-[Cloning]
+[First Commit]
 [Solutioning]
 [CI/CD]
 [TDD] 
@@ -19,13 +19,7 @@ WHY:
 [Technical Debt]
 
 TICKET:
-[Url of Ticket]
+[URL of Ticket]
 
 INFO:
-[Optional longer description of what was changed, reasons for change]
-
-HELP: 
-1. Please delete the WHY: optiions which are not applicable. 
-2. Cut-and-paste in the URL of the Work item linked to this commit, as the [Url of Ticket] 
-3. Give a brief Summary or ideally the actual work item's name if available, as the [Ticket Name or Title]
-4. GitHub defaults PR names to NAME: [Ticket Name or Title]
+[Optional longer description of what was changed, reasons for change, though far more details are available from the ticket URL]

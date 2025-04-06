@@ -1,0 +1,139 @@
+p, member, UserResponse, Get, internal
+p, member, UserResponse, Get, administrators
+p, member, UserResponse, Get, support
+p, member, UserResponse, Get, developers
+p, member, UserResponse, Get, testers
+p, member, UserResponse, Get, executive
+
+p, member, UserDisplaySettingsModel, Put, internal
+p, member, UserDisplaySettingsModel, Put, administrators
+p, member, UserDisplaySettingsModel, Put, support
+p, member, UserDisplaySettingsModel, Put, developers
+p, member, UserDisplaySettingsModel, Put, testers
+p, member, UserDisplaySettingsModel, Put, executive
+
+p, member, UserNameModel, Post, internal
+p, member, UserNameModel, Post, administrators
+p, member, UserNameModel, Post, support
+p, member, UserNameModel, Post, developers
+p, member, UserNameModel, Post, testers
+p, member, UserNameModel, Post, executive
+
+p, member, UserNameModel, Put, internal
+p, member, UserNameModel, Put, administrators
+p, member, UserNameModel, Put, support
+p, member, UserNameModel, Put, developers
+p, member, UserNameModel, Put, testers
+p, member, UserNameModel, Put, executive
+p, member, UserNameModel, Post, internal
+p, member, UserNameModel, Post, administrators
+p, member, UserNameModel, Post, support
+p, member, UserNameModel, Post, developers
+p, member, UserNameModel, Post, testers
+p, member, UserNameModel, Post, executive
+
+p, member, UserPhoneNumberModel, Delete, internal
+p, member, UserPhoneNumberModel, Delete, administrators
+p, member, UserPhoneNumberModel, Delete, support
+p, member, UserPhoneNumberModel, Delete, developers
+p, member, UserPhoneNumberModel, Delete, testers
+p, member, UserPhoneNumberModel, Delete, executive
+p, member, UserPhoneNumberModel, Get, internal
+p, member, UserPhoneNumberModel, Get, administrators
+p, member, UserPhoneNumberModel, Get, support
+p, member, UserPhoneNumberModel, Get, developers
+p, member, UserPhoneNumberModel, Get, testers
+p, member, UserPhoneNumberModel, Get, executive
+p, member, UserPhoneNumberModel, Patch, internal
+p, member, UserPhoneNumberModel, Patch, administrators
+p, member, UserPhoneNumberModel, Patch, support
+p, member, UserPhoneNumberModel, Patch, developers
+p, member, UserPhoneNumberModel, Patch, testers
+p, member, UserPhoneNumberModel, Patch, executive
+p, member, UserPhoneNumberModel, Post, internal
+p, member, UserPhoneNumberModel, Post, administrators
+p, member, UserPhoneNumberModel, Post, support
+p, member, UserPhoneNumberModel, Post, developers
+p, member, UserPhoneNumberModel, Post, testers
+p, member, UserPhoneNumberModel, Post, executive
+
+p, member, UserPhotoModel, Delete, internal
+p, member, UserPhotoModel, Delete, administrators
+p, member, UserPhotoModel, Delete, support
+p, member, UserPhotoModel, Delete, developers
+p, member, UserPhotoModel, Delete, testers
+p, member, UserPhotoModel, Delete, executive
+p, member, UserPhotoModel, Post, internal
+p, member, UserPhotoModel, Post, administrators
+p, member, UserPhotoModel, Post, support
+p, member, UserPhotoModel, Post, developers
+p, member, UserPhotoModel, Post, testers
+p, member, UserPhotoModel, Post, executive
+
+p, member, UserEmailAddressModel, Delete, internal
+p, member, UserEmailAddressModel, Delete, administrators
+p, member, UserEmailAddressModel, Delete, support
+p, member, UserEmailAddressModel, Delete, developers
+p, member, UserEmailAddressModel, Delete, testers
+p, member, UserEmailAddressModel, Delete, executive
+p, member, UserEmailAddressModel, Get, internal
+p, member, UserEmailAddressModel, Get, administrators
+p, member, UserEmailAddressModel, Get, support
+p, member, UserEmailAddressModel, Get, developers
+p, member, UserEmailAddressModel, Get, testers
+p, member, UserEmailAddressModel, Get, executive
+p, member, UserEmailAddressModel, Patch, internal
+p, member, UserEmailAddressModel, Patch, administrators
+p, member, UserEmailAddressModel, Patch, support
+p, member, UserEmailAddressModel, Patch, developers
+p, member, UserEmailAddressModel, Patch, testers
+p, member, UserEmailAddressModel, Patch, executive
+p, member, UserEmailAddressModel, Post, internal
+p, member, UserEmailAddressModel, Post, administrators
+p, member, UserEmailAddressModel, Post, support
+p, member, UserEmailAddressModel, Post, developers
+p, member, UserEmailAddressModel, Post, testers
+p, member, UserEmailAddressModel, Post, executive
+
+p, member, UserCommunicationPreferencesModel, Put, internal
+p, member, UserCommunicationPreferencesModel, Put, administrators
+p, member, UserCommunicationPreferencesModel, Put, support
+p, member, UserCommunicationPreferencesModel, Put, developers
+p, member, UserCommunicationPreferencesModel, Put, testers
+p, member, UserCommunicationPreferencesModel, Put, executive
+
+p, member, UserNotificationModel, Get, internal
+p, member, UserNotificationModel, Get, administrators
+p, member, UserNotificationModel, Get, support
+p, member, UserNotificationModel, Get, developers
+p, member, UserNotificationModel, Get, testers
+p, member, UserNotificationModel, Get, executive
+p, member, UserNotificationModel, Put, internal
+p, member, UserNotificationModel, Put, administrators
+p, member, UserNotificationModel, Put, support
+p, member, UserNotificationModel, Put, developers
+p, member, UserNotificationModel, Put, testers
+p, member, UserNotificationModel, Put, executive
+
+p, member, GroupNotificationModel, Get, internal
+p, member, GroupNotificationModel, Get, administrators
+p, member, GroupNotificationModel, Get, support
+p, member, GroupNotificationModel, Get, developers
+p, member, GroupNotificationModel, Get, testers
+p, member, GroupNotificationModel, Get, executive
+
+p, member, UserLoginModel, Get, internal
+p, member, UserLoginModel, Get, administrators
+p, member, UserLoginModel, Get, support
+p, member, UserLoginModel, Get, developers
+p, member, UserLoginModel, Get, testers
+p, member, UserLoginModel, Get, executive
+
+p, member, UserPasswordModel, Post, internal
+p, member, UserPasswordModel, Post, administrators
+p, member, UserPasswordModel, Post, support
+p, member, UserPasswordModel, Post, developers
+p, member, UserPasswordModel, Post, testers
+p, member, UserPasswordModel, Post, executive
+
+g, member, guest

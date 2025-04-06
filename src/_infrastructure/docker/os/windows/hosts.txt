@@ -1,0 +1,4 @@
+﻿# C:\Windows\System32\drivers\etc\hosts entries for local development
+127.0.0.1 dev-sql-server
+127.0.0.1 dev-redis-master
+127.0.0.1 dev-emailer

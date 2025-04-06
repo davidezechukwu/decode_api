@@ -1,0 +1,1 @@
+ਤੁਸੀਂ {{LoginDate}} ਨੂੰ IP ਐਡਰੈੱਸ {{IP}} ਦੇ ਨਾਲ {{FromLocation}} ਦੇ ਨੇੜੇ {{OS}} ਚੱਲ ਰਹੇ {{WithDevice}} ਨਾਲ ਲੌਗਇਨ ਕੀਤਾ ਸੀ।

@@ -1,0 +1,115 @@
+name: decode
+version: "3.9"  # optional since v1.27.0
+services:
+	#If you need postgres    
+    #dev-postgres:
+    #    container_name: dev-postgres-container
+    #    image: postgres:latest
+    #    restart: always
+    #    environment:
+    #        - POSTGRES_USER=postgres
+    #        - POSTGRES_PASSWORD=YourPassword
+    #        - POSTGRES_DB=decodedb
+    #    ports:
+    #        - '5432:5432'
+    #    volumes: 
+    #       - postgres:/var/lib/postgresql
+    
+
+    dev-sql-server:
+        image: mcr.microsoft.com/mssql/server:2022-latest        
+        ports:
+            - "1433:1433"
+        environment:
+            - ACCEPT_EULA=Y
+            - MSSQL_SA_PASSWORD=YourPassword            
+            - MSSQL_AGENT_ENABLED=1
+            - MSSQL_PID=Express 
+            - MSSQL_TCP_PORT=1433
+            - MSSQL_COLLATION=LATIN1_GENERAL_100_CI_AS_SC_UTF8
+        volumes:            
+            - type: volume
+              source: mssql
+              target: /var/opt/mssql
+
+    dev-sql-server-create:
+        image: decode-dev-sql-server-create:latest
+        depends_on:
+            dev-sql-server:
+                condition: service_started
+        build:
+            context: .
+            dockerfile: ./docker-dev-sql-server-create.dockerfile
+        entrypoint: /bin/sh -c "/opt/decode/api/www/wait-for-it.sh dev-sql-server:1433 -s -t 0 -- /bin/sh -c /opt/decode/api/www/start.sh"
+    
+
+    dev-redis-master:
+        image: bitnami/redis:latest
+        ports:
+            - "6379:6379"
+        volumes:
+            - redis_data:/bitnami/redis/data
+            #- /path/to/certs:/opt/bitnami/redis/certs
+        #command: /opt/bitnami/scripts/redis/run.sh --maxmemory 100mb && sysctl vm.overcommit_memory=1
+        environment:
+            - REDIS_PASSWORD=YourPassword
+            - ALLOW_EMPTY_PASSWORD=no
+            - REDIS_MASTER_PORT_NUMBER=6379                     
+	# comment outto use a dev smtp 
+    # dev-emailer:
+    #     image: yappabe/mailcatcher
+    #     ports:
+    #         - "1025:1025"
+    #         - "1080:1080"
+
+    #comment out  db-migrate, workers and other things that depend on SuperApi when debugging migrate.ts 
+    db-migrate:
+        image: decode-db-migrate:latest
+        environment:
+            - LOG_LEVEL=debug
+            - FIXTURES_PATH=/opt/decode/api/www/dist/_infrastructure/fixtures            
+        depends_on:
+            dev-sql-server:
+                condition: service_started
+            dev-sql-server-create:
+                condition: service_completed_successfully
+        build:
+            context: ../../../            
+            dockerfile: db-migrate.dockerfile
+        entrypoint: /bin/sh -c "node /opt/decode/api/www/dist/_infrastructure/migrations/firstrun.js"
+    
+
+    email-notification-worker:       
+        image: decode-email-notification-worker:latest
+        depends_on:
+            dev-sql-server:
+                condition: service_started
+            dev-sql-server-create:
+                condition: service_completed_successfully
+            db-migrate:
+                condition: service_completed_successfully
+        build:
+            context: ../../../            
+            dockerfile: email-notification-worker.dockerfile        
+
+
+    sms-notification-worker:       
+        image: decode-sms-notification-worker:latest
+        depends_on:
+            dev-sql-server:
+                condition: service_started
+            dev-sql-server-create:
+                condition: service_completed_successfully
+            db-migrate:
+                condition: service_completed_successfully
+        build:
+            context: ../../../            
+            dockerfile: sms-notification-worker.dockerfile        
+
+volumes:
+    #postgres:
+    #     driver: local
+    mssql:
+         driver: local
+    redis_data:
+         driver: local

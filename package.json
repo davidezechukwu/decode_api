@@ -1,0 +1,238 @@
+{
+	"bugs": {
+		"url": "mailto:davidezechukwu@hotmail.com?subject=Report%20a%20bug&body=Url:%0ADetails:%0A%0ABrowser:%0A%0AOS:%0AExtra%20information:%0A"
+	},
+	"contributors": [
+		{
+			"name": "David Ezechukwu",
+			"url": "mailto:davidezechukwu@hotmail.com?subject=Hello&body=Dear David,%0AYours sincerely"
+		},
+		{
+			"name": "Documentation",
+			"url": "https://decodeonline.app/api/docs"
+		}
+	],
+	"copyright.owner": "David Ezechukwu",
+	"dependencies": {
+		"@david.ezechukwu/core": "1.4.00",
+		"@loopback/authentication": "11.0.11",
+		"@loopback/authentication-passport": "7.0.11",
+		"@loopback/authorization": "0.15.11",
+		"@loopback/boot": "7.0.11",
+		"@loopback/core": "6.1.8",
+		"@loopback/logging": "0.12.11",
+		"@loopback/repository": "7.0.11",
+		"@loopback/repository-json-schema": "8.0.11",
+		"@loopback/rest": "14.0.11",
+		"@loopback/rest-explorer": "7.0.11",
+		"@loopback/security": "0.11.11",
+		"@loopback/service-proxy": "7.0.11",
+		"@shellicar/winston-azure-application-insights": "5.0.7",
+		"accept-language-parser": "1.5.0",
+		"applicationinsights": "3.6.0",
+		"axios": "1.8.3",
+		"body-parser": "1.20.3",
+		"casbin": "5.38.0",
+		"connect-redis": "8.0.2",
+		"debug": "4.4.0",
+		"device-detector-js": "3.0.3",
+		"dotenv": "16.4.7",
+		"express": "4.21.2",
+		"express-session": "1.18.1",
+		"jstoxml": "5.0.2",
+		"lodash": "4.17.21",
+		"loopback-connector-mssql": "3.8.0",
+		"loopback-connector-postgresql": "7.1.10",
+		"multer": "1.4.5-lts.1",
+		"nodemailer": "6.10.0",
+		"passport": "0.7.0",
+		"passport-facebook": "3.0.0",
+		"passport-google-oauth20": "2.0.0",
+		"passport-http": "0.3.0",
+		"passport-jwt": "4.0.1",
+		"passport-linkedin-oauth2": "2.0.0",
+		"passport-local": "1.0.0",
+		"passport-twitter": "0.1.5",
+		"pug": "3.0.3",
+		"redis": "4.7.0",
+		"serve-favicon": "2.5.0",
+		"source-map-support": "0.5.21",
+		"tslib": "2.8.1",
+		"unescape": "1.0.1",
+		"winston": "3.17.0",
+		"xml-escape": "1.1.0",
+		"xml-js": "1.6.11",
+		"xslt-processor": "0.11.7"
+	},
+	"description": "Powered by LoopBack4, Typescript, OpenAPI and NodeJS; Javascript required if used on a Browser due to HTML Form's POST/GET limitations",
+	"devDependencies": {
+		"@loopback/build": "11.0.10",
+		"@loopback/eslint-config": "15.0.5",
+		"@loopback/testlab": "7.0.10",
+		"@types/express-session": "1.18.1",
+		"@types/jstoxml": "5.0.0",
+		"@types/lodash": "4.17.16",
+		"@types/multer": "1.4.12",
+		"@types/node": "22.13.10",
+		"@types/nodemailer": "6.4.17",
+		"@types/passport": "1.0.17",
+		"@types/passport-facebook": "3.0.3",
+		"@types/passport-google-oauth20": "2.0.16",
+		"@types/passport-http": "0.3.11",
+		"@types/passport-jwt": "4.0.1",
+		"@types/passport-linkedin-oauth2": "1.5.6",
+		"@types/passport-local": "1.0.38",		
+		"@types/passport-twitter": "1.0.40",
+		"@types/underscore": "1.13.0",
+		"@types/xml2js": "0.4.14",
+		"@typescript-eslint/eslint-plugin": "8.26.1",
+		"@typescript-eslint/parser": "8.26.1",
+		"copyfiles": "2.4.1",
+		"db-migrate": "0.11.14",
+		"eslint": "8.57.1",
+		"npm-watch": "0.13.0",
+		"pg": "8.14.0",
+		"rimraf": "6.0.1",
+		"source-map-support": "0.5.21",
+		"typedoc": "0.27.9",
+		"typescript": "5.8.2"
+	},
+	"engines": {
+		"node": ">=20.9.0",
+		"npm": ">=7.24.2"
+	},
+	"files": [
+		"README.md",
+		"dist",
+		"src",
+		"!*/__tests__"
+	],
+	"homepage": "https://decodeonline.app/api/docs",
+	"keywords": [
+		"loopback-application",
+		"loopback",
+		"Typescript",
+		"Node",
+		"David Ezechukwu"
+	],
+	"knownIssues": [
+		{
+			"title": "The type for Model properties which are arrays are shown incorrectly on Swagger",
+			"description": "The type for Model properties which are arrays are shown incorrectly as empty objects ({})",
+			"link": "https://community.smartbear.com/t5/Swagger-Open-Source-Tools/Schema-with-an-Array-of-Objects-doesn-t-show-correct-object-type/m-p/206515#M1377"
+		},
+		{
+			"title": "The dependency pug@3.0.2 has a breaking change",
+			"description": "read plug-ins must now return Buffer if you want to support filters that use renderBuffer",
+			"link": "https://github.com/pugjs/pug/releases/tag/pug%403.0.0"
+		},
+		{
+			"title": "The dependency pug@3.0.2 has a breaking change",
+			"description": "The minify option on filters now requires you to install the relevant js transformer",
+			"link": "https://github.com/pugjs/pug/releases/tag/pug%403.0.0"
+		},
+		{
+			"title": "The dependency xslt-processor should not exceed version 0.11.7",
+			"description": "The dependency xslt-processor should not exceed version 0.11.7 as later versions of this package has breaking changes and bugs due to the asynchronous code introduced after this version",
+			"link": "https://www.npmjs.com/package/xslt-processor"
+		},
+		{
+			"title": "The dependency @loopback/eslint-config@15.0.5 has a peer dependency on eslint@8.57.x",
+			"description": "Upgrading to a later version of eslint greater than version 8.57.2 is currently not possible because of this peer dependency",
+			"link": "https://www.npmjs.com/package/xml-js"
+		},
+		{
+			"title": "The dependency passport-twitter@0.1.x uses an older and broken version of the npm package xmldom",
+			"description": "xmldom has multiple critical vulnerabilities, such as:- Misinterpreting malicious XML input and allowing multiple root nodes in a DOM",
+			"link": "https://github.com/xmldom/xmldom/security/advisories/GHSA-h6q6-9hqw-rwfv"
+		},
+		{
+			"title": "The dependency axios@1.8.3 has multiple high vulnerabilities",
+			"description": "Axios@1.8.3 has a Cross-Site Request Forgery vulnerability  and requests are vulnerable To Possible SSRF and Credential Leakage via Absolute URL",
+			"link": "https://github.com/advisories/GHSA-wf5p-g6vw-rhxx"
+		}
+	],
+	"license": "Private",
+	"main": "dist/index.js",
+	"name": "@david.ezechukwu/api",
+	"os": [
+		"win32",
+		"linux"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"resolutions": {
+		"axios": "1.8.3"
+	},
+	"scripts": {
+		"prebuild": "npm run clean",
+		"build": "tsc --build  --pretty",
+		"build:rebuild": "npm run clean && npm install && npm run lint:fix && npm run build && npm run docs && npm run copy:all",
+		"rebuild": "npm run build:rebuild",
+		"postbuild": "npm run docs && npm run copy:all",
+		"build:watch": "lb-tsc --watch",
+		"build:prod": "tsc --build --verbose --listFiles --pretty",
+		"clean": "lb-clean dist *.tsbuildinfo .eslintcache",
+		"copy:all": "npm run copy:package:json && npm run copy:certificates && npm run copy:templates && npm run copy:casbin && npm run copy:views && npm run copy:public && npm run copy:env && npm run copy:xslt && npm run copy:swagger",
+		"copy:casbin": "npx copyfiles --up 1  --all --verbose  ./src/_infrastructure/fixtures/casbin/* ./dist",
+		"copy:package:json": "npx copyfiles --all --verbose ./package.json ./dist",
+		"copy:env": "npx copyfiles --all --verbose ./.env ./dist",
+		"copy:views": "npx copyfiles --up 1 --all --verbose ./src/_views/**/* ./dist",
+		"copy:public": "npx copyfiles --up 1 --all --verbose ./src/_public/**/* ./dist",
+		"copy:xslt": "npx copyfiles --up 1  --all --verbose  ./src/**/*.xslt ./dist",
+		"copy:swagger": "npx copyfiles --up 1 --all --verbose ./src/swagger.html.ejs ./dist",
+		"copy:certificates": "npx copyfiles --up 1  --all --verbose  ./src/_infrastructure/fixtures/certificates/* ./dist",
+		"copy:templates": "npx copyfiles --up 1  --all --verbose  ./src/_infrastructure/fixtures/templates/**/* ./dist",
+		"docker:build": "docker build -t api .",
+		"docker:run": "docker run -p 3000:3000 -d api",
+		"docs": "npx typedoc",
+		"lint": "npm run lint:eslint:check --report-unused-disable-directives && npm run lint:prettier:check",
+		"lint:fix": "npm run lint:eslint:fix && npm run lint:prettier:fix",
+		"lint:check": "npm run lint:eslint:check && npm run lint:prettier:check",
+		"lint:eslint": "npx eslint  --debug --env-info --fix-dry-run --report-unused-disable-directives */**/*.ts",
+		"lint:eslint:fix": "npx eslint --fix --report-unused-disable-directives */**/*.ts",
+		"lint:eslint:check": "npx eslint  --debug --env-info --fix-dry-run --report-unused-disable-directives */**/*.ts",
+		"lint:prettier:check": "npx prettier -c */**/*.ts",
+		"lint:prettier": "npx prettier -c */**/*.ts",
+		"lint:prettier:fix": "npx prettier --write */**/*.ts",
+		"migrate:firstrun": "node ./_infrastructure/migrations/firstrun.js --rebuild",
+		"migrate:resetdb-postgres": "psql.exe -h localhost -a  -U postgres -p 5432 -f ./_infrastructure/database/create_database_postgres.sql",
+		"migrate-postgres": "psql.exe -h localhost -a  -U postgres -p 5432 -f ./_infrastructure/database/create_database_postgres.sql && npm run build && npm run migrate:firstrun",
+		"migrate:resetdb-sqlserver": "echo not supported",
+		"migrate-sqlserver": "npm run migrate:firstrun",
+		"migrate-sqlserver-rebuild": "npm run build && npm run migrate:firstrun",
+		"openapi-spec": "node ./openapi-spec",
+		"preopenapi-spec": "npm run build",
+		"start": "node dist/index.js",
+		"test": "lb-mocha --allow-console-logs \"./_tests\"",
+		"test:dev": "lb-mocha --allow-console-logs ./_tests/**/*.js && npm run posttest",
+		"watch": "npm-watch",
+		"watch:docs": "npm run docs",
+		"watch:src": "npm run build"
+	},
+	"types": "index.d.ts",
+	"version": "1.0.0.1",
+	"watch": {
+		"watch:docs": {
+			"patterns": [
+				"src"
+			],
+			"extensions": "ts,js",
+			"quiet": false,
+			"legacyWatch": true,
+			"delay": 2500,
+			"runOnChangeOnly": true
+		},
+		"watch:src": {
+			"patterns": [
+				"src"
+			],
+			"extensions": "ts",
+			"quiet": false,
+			"legacyWatch": true,
+			"delay": 2500,
+			"runOnChangeOnly": true
+		}
+	}
+}

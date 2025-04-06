@@ -1,0 +1,1 @@
+Veuillez vérifier votre numéro de téléphone mobile en cliquant sur le lien de vérification figurant sur le SMS que nous vous avons envoyé, le {{PhoneNumber}}.

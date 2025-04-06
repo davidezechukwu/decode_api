@@ -1,0 +1,1 @@
+https://github.com/loopbackio/loopback4-example-shopping/tree/upgrade-deps/kubernetes

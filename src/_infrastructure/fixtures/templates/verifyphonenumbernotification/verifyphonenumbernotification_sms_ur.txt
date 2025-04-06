@@ -1,0 +1,4 @@
+یہاں تصدیق کریں:-
+data-decode-link1="#"
+{{HostUrl}}api/user/{{UserId}}/phonenumbers/{{Id}}?verificationtoken={{VerificationToken}}&locale={{Locale}}
+data-decode-link2="#"

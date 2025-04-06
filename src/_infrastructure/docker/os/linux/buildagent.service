@@ -1,0 +1,15 @@
+# see https://docs.docker.com/engine/reference/commandline/info/
+# see https://www.freedesktop.org/software/systemd/man/systemd.syntax.html
+
+[Unit]
+Description=Decodeonline Build Agent Service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+WorkingDirectory=/home/rootuser/buildagent/
+ExecStart=/home/rootuser/buildagent/run.sh
+TimeoutStartSec=0
+
+[Install]
+WantedBy=multi-user.target

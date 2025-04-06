@@ -1,0 +1,1 @@
+Please verify your mobile phone number by clicking on the verify link on the SMS we sent you, on {{PhoneNumber}}. 

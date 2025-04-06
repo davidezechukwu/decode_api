@@ -1,0 +1,6 @@
+﻿# /etc/hosts
+127.0.0.1 dev-sql-server
+127.0.0.1 dev-redis-master
+127.0.0.1 dev-emailer
+127.0.0.1 email-notification-worker
+127.0.0.1 sms-notification-worker

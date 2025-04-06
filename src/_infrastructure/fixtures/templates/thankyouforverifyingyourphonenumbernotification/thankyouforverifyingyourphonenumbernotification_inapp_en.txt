@@ -1,0 +1,1 @@
+Thank you for verifying your phone number {{PhoneNumber}}

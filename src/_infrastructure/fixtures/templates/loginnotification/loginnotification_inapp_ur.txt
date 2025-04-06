@@ -1,0 +1,1 @@
+آپ نے {{LoginDate}} کو IP ایڈریس {{IP}} کے ساتھ {{FromLocation}} کے قریب {{OS}} چلانے والے {{WithDevice}} کے ساتھ لاگ ان کیا ہے۔

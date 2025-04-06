@@ -1,0 +1,2 @@
+You do not have a primary email address. 
+<a target="_blank" href="{{HostUrl}}{{Locale}}/user/emailaddresses">Please add one.</a>

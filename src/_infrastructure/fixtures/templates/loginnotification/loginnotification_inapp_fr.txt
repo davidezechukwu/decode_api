@@ -1,0 +1,1 @@
+Vous vous êtes connecté avec {{WithDevice}} exécutant {{OS}} quelque part près de {{FromLocation}} avec l'adresse IP {{IP}} le {{LoginDate}}

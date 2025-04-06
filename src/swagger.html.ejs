@@ -1,0 +1,128 @@
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title><%- indexTemplateTitle %></title>
+  <link rel="stylesheet" type="text/css" href="<%- swaggerThemeFile %>">
+  <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+  <style>
+    html {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+    body {
+      margin: 0;
+      background: #fafafa;
+    }
+    nav.header {
+      margin-top: -1.2rem;
+      margin-bottom: -1.0rem;
+      padding-top: 0rem;
+      padding-bottom: 0.25rem;
+      background-color: black;
+      text-align:center;      
+      font-family: sans-serif;
+    }
+    nav.header h1 a{
+      color:#f5f5f5;
+      text-decoration: none;
+      font-size: 90%;
+    }
+    nav.header h1 a:hover{
+      color:lightblue;
+      text-decoration: underline;
+    }
+    .swagger-ui{      
+    }
+    .swagger-ui .info {
+      margin: 0 0;
+    }
+    .swagger-ui .info .title {
+      color: #7d8492;
+      font-family: sans-serif;
+      font-size: 36px;
+      margin: 0;
+    }
+    .swagger-ui .information-container.wrapper{
+      text-align:center;      
+      background-color: #080e20;
+    }
+    .swagger-ui .information-container.wrapper span.url {
+      color:#f5f5f5; 
+    }
+    .swagger-ui .information-container.wrapper span.url:hover {
+      color:lightblue;
+      text-decoration: underline;
+    }    
+    .swagger-ui .info .title small pre {
+      color: #ccc;    
+    }
+    .swagger-ui .information-container.wrapper .description p{
+      color:lightskyblue;
+      margin-top: -1rem;
+      padding-bottom:4px;
+    }
+    .swagger-ui .info .title small{++
+      padding: 20px 10px !important;
+    }
+    .swagger-ui .info .title small {
+      background-color: #9da492;
+    }    
+    .swagger-ui .info .title small.version-stamp{
+      background-color: lightslategrey;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="swagger-ui">
+    <div class="information-container wrapper">
+      <div class="block col-12"> 
+        <nav class="header">
+          <h1>
+            <a href="/api/v1/explorer/">API Explorer Home</a>
+          </h1>
+        </nav>
+      </div>
+  </div>
+  </div>
+  <div id="swagger-ui"></div>
+
+  <script src="./swagger-ui-bundle.js"> </script>
+  <script src="./swagger-ui-standalone-preset.js"> </script>
+  <script>
+    window.onload = function () {
+      // Build a system
+      const ui = SwaggerUIBundle({
+        url: '<%- openApiSpecUrl %>',
+        dom_id: '#swagger-ui',
+        deepLinking: true,
+        filter: true,
+        docExpansion: 'none',
+        defaultModelsExpandDepth: 0,
+        defaultModelExpandDepth: 0,
+        presets: [
+          SwaggerUIBundle.presets.apis,
+          // SwaggerUIStandalonePreset
+          SwaggerUIStandalonePreset.slice(1) // Disable the top bar
+        ],
+        plugins: [
+          SwaggerUIBundle.plugins.DownloadUrl
+        ],
+        layout: 'StandaloneLayout'
+      })
+      window.ui = ui
+    }
+  </script>
+</body>
+
+</html>

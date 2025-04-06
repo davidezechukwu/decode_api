@@ -1,0 +1,1 @@
+Accueillir. Veuillez vérifier votre adresse e-mail en cliquant sur le lien de vérification de l'adresse e-mail dans l'e-mail de bienvenue que nous vous avons envoyé, à l'adresse {{EmailAddress}}.

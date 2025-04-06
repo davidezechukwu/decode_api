@@ -1,0 +1,2 @@
+ਤੁਹਾਡੇ ਕੋਲ ਪ੍ਰਾਇਮਰੀ ਈਮੇਲ ਪਤਾ ਨਹੀਂ ਹੈ।
+<a target="_blank" href="{{HostUrl}}{{Locale}}/user/emailaddresses">ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਸ਼ਾਮਲ ਕਰੋ।</a>
