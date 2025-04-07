@@ -1,6 +1,13 @@
 <!-- Improved compatibility of back to top link: See: https://github.com/microsoft/TypeScript/pull/73 -->
 <a name="readme-top"></a>
 
+This project was born out of a proof of concept to see whether a single core language, Typescript in this instance, could be used across the 3 core full-stack layers, ie UX, API, Data. It is technical all feasible if using MongoDB or any of the Javascript NOSQL DBs. If it proved all ok, it was intended as  a Rapid Application Development Framework Template with all the good principles and patterns and core functionality such as authentication, authorisation, emailing, testing, inapp notifications, ci/cd, apis, workers,  localisation/globalisation, and more; already done, with me just adding more pages, endpoints, and code services to achieve more specialised business functionalities. In essense a  starter block for building more specialised bespoke web and cross-platform mobile Applications. It is also a show of how design patterns can DRASTICALLY cut sown the amount of code needed to do certain things. Take a look at the Notification System, and how inifinitely extensible it is, for me to add more notifiers like Facebook messenger, twitter dm, etc, using a strategy pattern and  
+Note: 
+I am discarding this framework despite my belief that Loopback and NextJS are not well-suited for enterprise applications, as both frameworks come with significant challenges. Loopback and NextJS frequently experience breaking updates, and Loopback’s lack of support for compound primary keys is a major drawback. This limitation hinders the ability to normalize tables beyond 3NF into 4th Normal Form (4NF) and 5th Normal Form (5NF), which can critically impact performance tuning options for large datasets. 
+Additionally, while Typescript facilitates unified development across APIs, websites and native mobile apps—spanning the UX layer (React/NextJS) and the API layer (Loopback)—the same benefits can be achieved within the more secure, mature, and robust .NET ecosystem. Leveraging Blazor (C#) and MAUI (C#), developers gain the advantage of a cohesive and powerful solution. The .NET ecosystem also provides better AI libraries, Tooling and integration. 
+Loopback when used with TYpescript has excellect features though the OPen and Extensible principles
+
+
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
