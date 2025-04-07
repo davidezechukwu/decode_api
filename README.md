@@ -24,8 +24,7 @@ Dive in and start building amazing things with this API! If you have any questio
 
 
 ### Built With:-
-* [![Typescript][Typescript.js]][Typescript-url]
-* [![Typescript][Typescript.js]][Typescript-url]
+* [![Typescript][Typescript]][Typescript-url]
 * [![Loopback][Loopback.js]][Loopback-url]
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -110,7 +109,7 @@ You will need to authenticate on the web client in order to access the API endpo
 [license-url]: https://github.com/microsoft/TypeScript/blob/master/LICENSE.txt
  -->
 
-[Typescript.js]: https://img.shields.io/badge/typescript.js-000000?style=for-the-badge&logo=typescriptdotjs&logoColor=white
+[Typescript]: https://img.shields.io/badge/typescript-000000?style=for-the-badge&logo=typescript&logoColor=white
 [Typescript-url]: https://www.typescriptlang.org/
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/davidezechukwu
