@@ -10,11 +10,11 @@ This project was born out of a proof of concept to see whether a single core lan
 <p>
 I am discarding this framework despite my belief that Loopback and NextJS are not well-suited for enterprise applications, as both frameworks come with significant challenges. Loopback and NextJS frequently experience breaking updates, and Loopback’s lack of support for compound primary keys is a major drawback. This limitation hinders the ability to normalize tables beyond 3NF into 4th Normal Form (4NF) and 5th Normal Form (5NF), which can critically impact performance tuning options for large datasets. 
 Additionally, while Typescript facilitates unified development across APIs, websites and native mobile apps—spanning the UX layer (React/NextJS) and the API layer (Loopback)—the same benefits can be achieved within the more secure, mature, and robust .NET ecosystem. Leveraging Blazor (C#) and MAUI (C#), developers gain the advantage of a cohesive and powerful solution. The .NET ecosystem also provides better AI libraries, Tooling and integration. 
-<strong>Loopback when used with TYpescript has excellect features</strong>
+<strong>Loopback when used with Typescript has excellect features</strong>
 </p>
 <p>
-    Other ideas on database performance tuning, objected oriented javascript, views available on twitter at [
-    [twitter-url]](https://twitter.com/davidezechukwu)
+    Other ideas on database performance tuning, objected oriented javascript, views available on twitter at
+    <a href='https://twitter.com/davidezechukwu'  target='_blank'>https://twitter.com/davidezechukwu</a> 
 </p>
 <!-- ABOUT THE PROJECT -->
 (Drafting) Comprehensive API documentation covering all endpoints, parameters, and response formats.
